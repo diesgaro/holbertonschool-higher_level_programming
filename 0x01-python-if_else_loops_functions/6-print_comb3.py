@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 separator = ", "
-list = []
 for i in range(0, 10):
-    for j in range(i + 1, 10):
-        list.append("{}{}".format(i, j))
-
-print(separator.join(list))
+    for x in range(i + 1, 10):
+        print("{}{}".format(i, x), end="")
+        if (i != 8 or x != 9):
+            print(separator, end="")
+print("")
