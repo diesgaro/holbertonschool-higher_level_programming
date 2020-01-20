@@ -1,0 +1,48 @@
+The ``My List`` module
+=====================
+
+Using ``MyList``
+----------------
+
+This is an example text file in reStructuredText format. First import
+``MyList`` from the ``1-my_list`` module:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Now use it:
+    Test create the list
+    >>> a = MyList()
+    >>> a
+    []
+
+    Test add values to a list
+    >>> a.append(2)
+    >>> a.append(1)
+    >>> a.append(5)
+    >>> a
+    [2, 1, 5]
+
+    Test sorted a list
+    >>> a.print_sorted()
+    [1, 2, 5]
+
+    Test add negative values
+    >>> a.append(-5)
+    >>> a.append(-3)
+    >>> a
+    [2, 1, 5, -5, -3]
+
+    Test sorted a list with negative numbers
+    >>> a.print_sorted()
+    [-5, -3, 1, 2, 5]
+
+    Test add char
+    >>> a.append('a')
+    >>> a
+    [2, 1, 5, -5, -3, 'a']
+
+    Test sorted a list with char
+    >> a.print_sorted()
+    Traceback (most recent call last):
+    ...
+    TypeError: unorderable types: str() < int()
