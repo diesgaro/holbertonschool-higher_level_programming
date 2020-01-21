@@ -5,7 +5,7 @@ def read_lines(filename="", nb_lines=0):
 
     if nb_lines <= 0 or nb_lines >= len(list):
         for line in list:
-            print (line, end='')
+            print(line, end='')
     else:
         for i in range(nb_lines):
-            print (list[i], end='')
+            print(list[i], end='')
