@@ -1,0 +1,23 @@
+The ``Integer Validator`` module
+=====================
+
+Using ``BaseGeometry``
+----------------
+
+This is an example text file in reStructuredText format. First import
+``BaseGeometry`` from the ``7-base_geometry`` module:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Now use it:
+    Test create the instance of a Class and add a int
+    >>> bg = BaseGeometry
+    >>> bg.integer_validator("my_int", 12)
+
+    Test add string
+    >>> bg = BaseGeometry
+    >>> try:
+    ...     bg.integer_validator("name", "name")
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] name must be an integer
