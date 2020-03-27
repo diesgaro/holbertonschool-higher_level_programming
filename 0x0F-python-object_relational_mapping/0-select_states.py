@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Python script that
+Python script that get and show all rows in database table
 """
 
 from sys import argv
