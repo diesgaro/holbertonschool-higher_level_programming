@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Python script that get and show row filtered by name passing
-how argument avoid sql injecction
+Python script that get and prints the cities with his state
 """
 
 from sys import argv
