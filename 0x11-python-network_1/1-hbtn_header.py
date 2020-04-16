@@ -2,11 +2,11 @@
 """
 Script that get response header X-Request-Id
 """
-from sys import argv
-from urllib.request import urlopen, Request
+import sys
+import urllib.request
 
-my_url = argv[1]
-req = Request(my_url)
+my_url = sys.argv[1]
+req = urllib.request.Request(my_url)
 
-with urlopen(req) as response:
+with urllib.request.urlopen(req) as response:
     print(response.headers['X-Request-Id'])
