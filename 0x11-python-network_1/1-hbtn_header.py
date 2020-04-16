@@ -8,4 +8,6 @@ from urllib.request import urlopen
 url = argv[1]
 
 with urlopen(url) as response:
-    print(response.getheader('X-Request-Id'))
+    val_header = response.getheader('X-Request-Id')
+
+print(val_header)
