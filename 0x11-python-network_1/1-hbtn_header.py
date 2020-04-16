@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Script that fetches https://intranet.hbtn.io/status
+Script that get response header X-Request-Id
 """
 from sys import argv
 from urllib.request import urlopen
