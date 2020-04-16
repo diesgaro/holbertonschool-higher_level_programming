@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-Script that get response header X-Request-Id
+Script that fetches https://intranet.hbtn.io/status
 """
-import urllib.request
 from sys import argv
+from urllib.request import urlopen
 
-if __name__ == "__main__":
-    with urllib.request.urlopen(argv[1]) as response:
-        val_header = response.getheader('X-Request-ID')
+if if __name__ == "__main__":
+    my_url = argv[1]
 
-    print(val_header)
+    with urlopen(my_url) as response:
+        print(response.headers['X-Request-Id'])
