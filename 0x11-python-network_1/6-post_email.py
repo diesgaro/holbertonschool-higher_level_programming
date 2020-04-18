@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Script that get header variable using request
+Script that sends post request using requests library
 """
 from sys import argv
 import requests
