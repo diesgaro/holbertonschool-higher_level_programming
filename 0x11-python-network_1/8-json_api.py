@@ -6,7 +6,7 @@ from sys import argv
 import requests
 
 if __name__ == "__main__":
-    url = 'http://6ab867a77f21.19.hbtn-cod.io:5000/search_user'
+    url = 'http://0.0.0.0:5000/search_user'
     parameter = ""
     send_parameters = {}
 
