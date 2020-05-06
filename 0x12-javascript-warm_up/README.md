@@ -13,6 +13,7 @@
 * https://www.youtube.com/watch?v=sjyJBL5fkp8
 * https://www.youtube.com/watch?v=vZBCTc9zHtI
 * https://github.com/mbeaudru/modern-js-cheatsheet
+* http://51elliot.blogspot.com/2012/01/simple-intro-to-nodejs-module-scope.html
 
 ## Tasks
 
