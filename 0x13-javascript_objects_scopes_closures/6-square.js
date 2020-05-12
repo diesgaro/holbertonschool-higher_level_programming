@@ -1,21 +1,14 @@
 #!/usr/bin/node
 /*
-Define Class Square extends Rectangle
+Define Class Square extends Square
 */
 
-const rectangle = require('./4-rectangle');
+const parentSquare = require('./5-square');
 
-class Square extends rectangle {
-  constructor (size) {
-    super(size, size);
-    this.size = size;
-  }
-
-  charPrint (c) {
-    const character = typeof (c) === 'undefined' ? 'X' : c;
-
+class Square extends parentSquare {
+  charPrint (c = 'X') {
     for (let i = 0; i < this.height; i++) {
-      console.log(character.repeat(this.width));
+      console.log(c.repeat(this.width));
     }
   }
 }
