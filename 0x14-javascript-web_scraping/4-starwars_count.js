@@ -3,9 +3,8 @@
     Make a request and print the result
 */
 const request = require('request');
-const args = process.argv;
 
-request(args[2], (err, res, body) => {
+request(process.argv[2], (err, res, body) => {
   let count = 0;
   if (err) {
     console.log(err);
