@@ -6,7 +6,12 @@ const request = require('request');
 const args = process.argv;
 
 const options = {
-  url: args[2]
+  url: args[2],
+  method: 'GET',
+  headers: {
+    'Accept-Charset': 'utf-8',
+    'User-Agent': 'Holberton-1265'
+  }
 };
 
 request(options, (err, res, body) => {
@@ -17,8 +22,7 @@ request(options, (err, res, body) => {
     const obj = JSON.parse(body);
     for (let i = 0; i < obj.count; i++) {
       for (let j = 0; j < obj.results[i].characters.length; j++) {
-        const strFind = obj.results[i].characters[j].search('/people/18/');
-        if (strFind !== -1) {
+        if (obj.results[i].characters[j].endsWith('/18/')) {
           count++;
         }
       }
