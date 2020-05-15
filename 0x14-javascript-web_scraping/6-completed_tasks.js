@@ -22,11 +22,10 @@ request(options, (err, res, body) => {
     const newObj = {};
 
     for (let i = 0; i < obj.length; i++) {
-      if (!newObj[obj[i].userId]) {
-        newObj[obj[i].userId] = 0;
-      }
-
       if (obj[i].completed) {
+        if (!newObj[obj[i].userId]) {
+          newObj[obj[i].userId] = 0;
+        }
         newObj[obj[i].userId] = newObj[obj[i].userId] + 1;
       }
     }
