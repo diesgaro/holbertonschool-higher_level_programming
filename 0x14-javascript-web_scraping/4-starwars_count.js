@@ -5,16 +5,7 @@
 const request = require('request');
 const args = process.argv;
 
-const options = {
-  url: args[2],
-  method: 'GET',
-  headers: {
-    'Accept-Charset': 'utf-8',
-    'User-Agent': 'Holberton-1265'
-  }
-};
-
-request(options, (err, res, body) => {
+request(args[2], (err, res, body) => {
   let count = 0;
   if (err) {
     console.log(err);
