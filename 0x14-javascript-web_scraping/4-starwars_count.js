@@ -1,22 +1,20 @@
 #!/usr/bin/node
 /*
-    Make a request and print the result
+  Star wars Wedge Antilles
 */
 const request = require('request');
-
-request(process.argv[2], (err, res, body) => {
-  let count = 0;
-  if (err) {
-    console.log(err);
+request(process.argv[2], function (error, response, body) {
+  if (error) {
+    console.log(error);
   } else {
-    const obj = JSON.parse(body);
-    for (let i = 0; i < obj.count; i++) {
-      for (let j = 0; j < obj.results[i].characters.length; j++) {
-        if (obj.results[i].characters[j].endsWith('/18/')) {
-          count++;
+    let cnt = 0;
+    JSON.parse(body).results.forEach(character => {
+      character.characters.forEach(link => {
+        if (link.endsWith('/18/')) {
+          cnt++;
         }
-      }
-    }
+      });
+    });
+    console.log(cnt);
   }
-  console.log(count);
 });
