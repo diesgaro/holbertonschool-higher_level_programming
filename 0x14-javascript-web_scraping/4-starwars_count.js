@@ -22,7 +22,7 @@ request(options, (err, res, body) => {
     let count = 0;
     for (let i = 0; i < obj.count; i++) {
       for (let j = 0; j < obj.results[i].characters.length; j++) {
-        const strFind = obj.results[i].characters[j].search('/people/18/');
+        const strFind = obj.results[i].characters[j].search('/18/');
         if (strFind !== -1) {
           count++;
         }
